@@ -1,9 +1,9 @@
-const CounterButton = (props) => {
+const CounterButton = ({props}) => {
 
-    const {start, label} = {...props}
+    const {start, label} = props
     const [count, setCount] = React.useState(+start)
 
-    return <button type="button" onClick={()=> setCount(count +1 )}>{label} ({count})</button>
+    return <button type="button" onClick={()=> setCount(count + 1)}>{label} ({count})</button>
 }
 
 const buttons = document.getElementsByTagName('CounterButton');
